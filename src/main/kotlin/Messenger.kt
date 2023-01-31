@@ -1,0 +1,3 @@
+interface Messenger {
+    fun sendMessage()
+}

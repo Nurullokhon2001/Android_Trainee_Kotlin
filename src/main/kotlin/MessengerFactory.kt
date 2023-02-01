@@ -1,12 +1,9 @@
-import java.lang.RuntimeException
+import Messengers.TELEGRAM
 
 class MessengerFactory {
-    fun createMessenger(messengerType: String) =
+    fun createMessenger(messengerType: Messengers) =
         when (messengerType) {
-            "telegram", "Telegram" -> Telegram()
-            "watsapp", "Watsapp", "WatsApp" -> WatsApp()
-            else -> throw RuntimeException(
-                "Messenger type not found"
-            )
+            TELEGRAM -> Telegram()
+            Messengers.WATSAPP -> WatsApp()
         }
 }

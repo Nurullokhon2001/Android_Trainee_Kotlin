@@ -1,3 +1,4 @@
+package factory
 fun main() {
     val factory = MessengerFactory()
     val messenger: Messenger = factory.createMessenger(Messengers.TELEGRAM)

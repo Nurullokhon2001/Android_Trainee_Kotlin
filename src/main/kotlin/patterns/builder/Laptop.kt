@@ -1,4 +1,4 @@
-package builder
+package patterns.builder
 
 class Laptop(
     private var cpu: CpuTypes = CpuTypes.COREI7,

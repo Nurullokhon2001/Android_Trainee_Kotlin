@@ -1,4 +1,4 @@
-package factory
+package patterns.factory
 
 enum class Messengers {
     TELEGRAM,

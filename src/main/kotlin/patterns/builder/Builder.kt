@@ -1,4 +1,4 @@
-package builder
+package patterns.builder
 
 interface Builder {
     fun ram(ram: Int): Builder

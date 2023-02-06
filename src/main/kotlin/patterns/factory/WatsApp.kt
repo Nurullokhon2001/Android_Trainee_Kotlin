@@ -1,4 +1,4 @@
-package factory
+package patterns.factory
 
 class WatsApp : Messenger {
     override fun sendMessage() {

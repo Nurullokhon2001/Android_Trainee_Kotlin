@@ -1,4 +1,4 @@
-package builder
+package patterns.builder
 
 fun main() {
     val laptop: Builder = Laptop()

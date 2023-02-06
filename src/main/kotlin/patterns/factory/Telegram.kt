@@ -1,4 +1,4 @@
-package factory
+package patterns.factory
 
 class Telegram : Messenger {
     override fun sendMessage() {

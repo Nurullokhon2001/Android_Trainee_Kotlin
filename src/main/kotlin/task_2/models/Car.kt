@@ -10,6 +10,6 @@ data class Car(
         return " Марка машины: $carMark ," +
                 "Номер машины : $carNumber ," +
                 " Цвет машины: $carColor ," +
-                " Владелец : ${carOwner.name + carOwner.surName}"
+                " Владелец : ${carOwner.name + " " + carOwner.surName}"
     }
 }

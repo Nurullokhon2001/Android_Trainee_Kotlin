@@ -77,7 +77,7 @@ object Manager {
         }
     }
 
-    fun getNumberOfParkedCars() {
+    private fun getNumberOfParkedCars() {
         println("Количество припаркованных машин за время работы: $numberOfParkedCars ")
     }
 

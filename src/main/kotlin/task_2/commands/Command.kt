@@ -5,10 +5,11 @@ enum class Command(val command: String) {
     END("/end"),
     HELP("/help"),
     PARK("/park"),
-    PARK_STATUS("/park_status"),
+    PARK_STATUS("/park_stats"),
     GET_CAR("/return"),
     PARK_INFO_BY_CAR("/park_info_by_car"),
-    PARK_INFO_BY_PLACE("/park_info_by_place");
+    PARK_INFO_BY_PLACE("/park_info_by_place"),
+    PARK_ALL_STATS("/park_all_stats");
 
     companion object {
         fun findCommand(value: String?): Command? = values().firstOrNull { it.command == value }

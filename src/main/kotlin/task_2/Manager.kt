@@ -6,6 +6,7 @@ import task_2.models.CarOwner
 
 object Manager {
     private val parking = Parking.create()
+    private var numberOfParkedCars = 0
     fun start() {
         while (true) {
             val readText = readln()
@@ -27,6 +28,10 @@ object Manager {
                     if (checkSize(command, arguments.size)) {
                         parkCar(Car(arguments[0], arguments[1], arguments[2], CarOwner(arguments[3], arguments[4])))
                     }
+                }
+
+                Command.PARK_ALL_STATS.command -> {
+                    getNumberOfParkedCars()
                 }
 
                 Command.PARK_INFO_BY_CAR.command -> {
@@ -72,11 +77,16 @@ object Manager {
         }
     }
 
+    private fun getNumberOfParkedCars() {
+        println("Количество припаркованных машин за время работы: $numberOfParkedCars ")
+    }
+
     private fun parkCar(car: Car) {
         for (i in 1..20) {
             if (parking["P$i"] == null) {
                 parking["P$i"] = car
                 println("Номер парковки: P$i")
+                numberOfParkedCars++
                 return
             }
         }
